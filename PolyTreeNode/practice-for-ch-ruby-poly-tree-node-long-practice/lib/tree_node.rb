@@ -12,7 +12,7 @@ attr_reader :value, :children, :parent
             return
         else new_parent.children
     end
-
+# check
     def add_child()
 
     end
