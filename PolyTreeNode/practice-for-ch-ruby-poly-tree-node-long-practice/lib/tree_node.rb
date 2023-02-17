@@ -7,8 +7,10 @@ attr_reader :value, :children, :parent
         @parent = nil
     end
 
-    def parent=(value, children)
-        @parent = (value, children) if !self.include?(parent.value)
+    def parent=(new_parent)
+        if parent == new_parent
+            return
+        else new_parent.children
     end
 
     def add_child()
