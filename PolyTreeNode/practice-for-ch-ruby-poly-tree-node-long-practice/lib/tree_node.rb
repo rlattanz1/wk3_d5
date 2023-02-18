@@ -22,13 +22,13 @@ attr_reader :value, :children, :parent
     end
 
     def add_child()
-        
+
     end
 
     def remove_child()
 
-    end  #check
-# check 2
+    end
+    
     def dfs()
 
     end
