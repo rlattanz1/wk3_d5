@@ -21,14 +21,23 @@ attr_reader :value, :children, :parent
         end
     end
 
-    def add_child()
-        
+    def add_child(child_node)
+        if self.children.include?(child_node)
+            return
+        else
+            child_node.parent=(self)
+        end
     end
 
-    def remove_child()
+    def remove_child(child_node)
+        if self.children.include?(child_node)
+            self.children.delete(child_node)
+            child_node.parent=(nil)
+        else
+            raise "node is not a child"
+        end
+    end
 
-    end  #check
-# check 2
     def dfs()
 
     end
@@ -38,8 +47,3 @@ attr_reader :value, :children, :parent
     end
 
 end
-
-# p node_a = PolyTreeNode.new("a")
-# p node_b = PolyTreeNode.new("b")
-# p node_b.parent = node_a
-# p node_b
