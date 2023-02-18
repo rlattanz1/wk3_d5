@@ -39,12 +39,27 @@ attr_reader :value, :children, :parent
         end
     end
 
-    def dfs()
-        
+    def dfs(target)
+        return self if self.value == target
+
+        children.each do |child|
+            result = child.dfs(target)
+            return result unless result.nil?
+        end
+    
+        nil
     end
 
-    def bfs()
+    def bfs(target)
+        container = [self] # a
 
+        until container.empty?
+            node = container.shift # a
+            return node if node.value == target
+            container.concat(node.children)
+        end
+
+        nil
     end
 
 end
