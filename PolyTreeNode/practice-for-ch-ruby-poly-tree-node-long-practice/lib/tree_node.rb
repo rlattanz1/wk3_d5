@@ -27,6 +27,7 @@ attr_reader :value, :children, :parent
         else
             child_node.parent=(self)
         end
+
     end
 
     def remove_child(child_node)
@@ -38,13 +39,8 @@ attr_reader :value, :children, :parent
         end
     end
 
-<<<<<<< HEAD
-    end
-    
-=======
->>>>>>> b9e1c2d047af4a067883d83ada0de7ca5a648065
     def dfs()
-
+        
     end
 
     def bfs()
